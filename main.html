@@ -3,50 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bflap 기업</title> <style>
+    <title>메인 페이지</title>
+    <style>
         /* 페이지 전체 디자인 */
         body {
             margin: 0;
             padding: 0;
             background-color: #f0f0f0; /* 배경색: 연한 회색 */
-            font-family: 'Arial', sans-serif; /* 폰트 설정 */
-            display: flex;             /* 내용을 중앙에 정렬하기 위한 설정 */
-            justify-content: center;   /* 가로 중앙 정렬 */
-            align-items: center;       /* 세로 중앙 정렬 */
-            height: 100vh;             /* 화면 전체 높이 사용 */
-            flex-direction: column;    /* 위아래로 요소 배치 */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
         }
 
-        /* 제목 디자인 */
         h1 {
-            color: #333; /* 글자색: 진한 회색 */
-            font-size: 3rem; /* 글자 크기: 3배 */
-            margin-bottom: 20px; /* 아래쪽 여백 */
+            color: #333;
+            font-size: 3rem;
+            margin-bottom: 30px;
         }
 
-        /* 돌아가기 버튼 디자인 */
-        .back-btn {
-            padding: 10px 20px; /* 버튼 내부 여백 */
-            background-color: #007bff; /* 버튼색: 파란색 */
-            color: white; /* 글자색: 흰색 */
+        /* 버튼들을 감싸는 상자 (버튼 사이 간격 조절용) */
+        .button-group {
+            display: flex;
+            gap: 20px; /* 버튼 사이 간격 20px */
+        }
+
+        /* 공통 버튼 디자인 */
+        .btn {
+            padding: 15px 30px;
             text-decoration: none; /* 밑줄 제거 */
-            border-radius: 5px; /* 모서리 둥글게 */
-            font-weight: bold; /* 글자 굵게 */
-            transition: 0.3s; /* 부드러운 효과 */
+            border-radius: 8px; /* 모서리 둥글게 */
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: 0.3s;
         }
 
-        /* 마우스를 올렸을 때 버튼 색 변화 */
-        .back-btn:hover {
-            background-color: #0056b3; /* 더 진한 파란색으로 변경 */
+        /* 1번 버튼: 인트로로 돌아가기 (회색) */
+        .back-btn {
+            background-color: #6c757d;
+            color: white;
         }
+        .back-btn:hover { background-color: #5a6268; }
+
+        /* 2번 버튼: 서브 페이지로 이동 (파란색) -> 새로 추가된 것! */
+        .sub-btn {
+            background-color: #007bff;
+            color: white;
+        }
+        .sub-btn:hover { background-color: #0056b3; }
     </style>
 </head>
 <body>
 
     <h1>환영합니다 메인 페이지입니다.</h1>
-    <p>원하시는 내용이 있으신가요?</p>
+    <p> 원하시는 내용이 있으신가요?</p>
     
-    <a href="index.html" class="back-btn">처음으로 돌아가기</a>
+    <div class="button-group">
+        <a href="index.html" class="btn back-btn">처음으로</a>
+
+        <a href="sub.html" class="btn sub-btn">더 알아보기 (서브)</a>
+    </div>
 
 </body>
 </html>
